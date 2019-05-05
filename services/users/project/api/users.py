@@ -51,7 +51,7 @@ class UsersList(Resource):
 
         username = post_data.get('username')
         email = post_data.get('email')
-        
+
         try:
             user = User.query.filter_by(email=email).first()
             if not user:
@@ -61,7 +61,8 @@ class UsersList(Resource):
                 response_object['message'] = f'{email} was added!'
                 return response_object, 201
             else:
-                response_object['message'] = 'Sorry. That email already exists.'
+                response_object['message'] = 'Sorry. ' \
+                    'That email already exists.'
                 return response_object, 400
         except exc.IntegrityError:
             db.session.rollback()
