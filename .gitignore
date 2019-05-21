@@ -1,4 +1,8 @@
 __pycache__
 env
 htmlcov
+<<<<<<< HEAD
 .DS_Store
+=======
+.vscode
+>>>>>>> 428ed40421ca94f6a3d8a24082f8b2499d104e33
